@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    sigma.ali/disable-cascading-deletion: 'true'
+  labels:
+    demo-from: amy
+  name: amy
+spec:
+  finalizers:
+  - kubernetes

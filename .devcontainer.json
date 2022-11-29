@@ -1,5 +1,5 @@
 {
-	"name": "Kubernetes - Minikube-in-Docker",
+	"name": "Kubernetes-Minikube-in-Docker",
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:1": {
@@ -20,10 +20,8 @@
 			"version": "latest",
 			"helm": "latest",
 			"minikube": "latest"
-		}
-		// "kusionstack.io/devcontainers/features/kusion:1": {
-		// 	"version": "latest"
-		// }
+		},
+		"ghcr.io/amygroup-inc/devcontainer-features/kusion:0": {}
 	},
 
 	"overrideFeatureInstallOrder": [
@@ -34,7 +32,7 @@
 	"extensions": [
 		"kcl.kcl-vscode-extension",
 		"KusionStack.kusion"
-	]
+	],
 	// The value of the openFiles property is an array of one or more files in your repository. 
 	// The paths are relative to the root of the repository (absolute paths are not supported). 
 	// The files are opened in the web client in the order specified, with the first file in the array displayed in the editor.
@@ -54,7 +52,7 @@
 	// "postCreateCommand": "kubectl version",
 
 	// Use 'postStartCommand' to run commands after the container is created like starting minikube.
-	// "postStartCommand": "nohup bash -c 'minikube start &' > minikube.log 2>&1",
+	"postStartCommand": "nohup bash -c 'minikube start &' > minikube.log 2>&1"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
