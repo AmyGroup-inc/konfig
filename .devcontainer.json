@@ -40,7 +40,7 @@
 			]
 		}
 	},
-	"postCreateCommand": [
+	"onCreateCommand": [
 		"ls /usr/local/bin",
 		"/usr/local/bin/minikube -h",
 		"which minikube",
