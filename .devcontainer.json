@@ -40,7 +40,10 @@
 			]
 		}
 	},
-	"onCreateCommand": [
+	"postCreateCommand": [
+		"ls /usr/local/bin",
+		"/usr/local/bin/minikube -h",
+		"which minikube",
 		"nohup bash -c 'minikube start &' > minikube.log 2>&1"
 	]
 }
