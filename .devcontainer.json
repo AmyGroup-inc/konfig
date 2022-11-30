@@ -41,9 +41,6 @@
 		}
 	},
 	"onCreateCommand": [
-		"ls /usr/local/bin",
-		"/usr/local/bin/minikube -h",
-		"which minikube",
-		"nohup bash -c 'minikube start &' > minikube.log 2>&1"
+		"docker pull gcr.io/k8s-minikube/kicbase:v0.0.36"
 	]
 }
